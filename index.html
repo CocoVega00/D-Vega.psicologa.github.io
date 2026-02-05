@@ -1,250 +1,225 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D'Vega Clinic</title>
+<title>Clínica D'Vega</title>
 
-<!-- Fuente Inter -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
+  <style>
 body{
   margin:0;
-  font-family:'Inter', sans-serif;
-  background:#f3f6fa;
-  color:#1f2937;
+  font-family:'Segoe UI', sans-serif;
+  color:#2c3e50;
 }
 
 /* NAV */
-nav{
+.nav{
   position:fixed;
   width:100%;
   top:0;
   background:white;
   box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  padding:18px 8%;
+  z-index:999;
+}
+
+.nav-content{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:1000;
 }
 
-nav a{
+.nav a{
   text-decoration:none;
-  margin-left:30px;
+  margin-left:25px;
   color:#4b5563;
   font-weight:500;
 }
 
-nav a:hover{
-  color:#1f5fae;
+.nav a:hover{
+  color:#163c94;
 }
 
-/* BOTÓN */
 .btn{
-  background:#1f5fae;
-  color:white;
-  padding:10px 24px;
+  background:#163c94;
+  color:white !important;
+  padding:8px 20px;
   border-radius:30px;
-  font-weight:500;
+}
+
+/* HERO */
+.hero{
+  height:85vh;
+  background:url(<img src="Foto%20cinthia.png" style="width:300px; border-radius:20px;">) center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  position:relative;
+  margin-top:70px;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+  position:relative;
+  z-index:1;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+/* SECCIONES */
+.section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  color:#163c94;
+  margin-bottom:40px;
+}
+
+/* SERVICIOS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#f9fbfd;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  color:#163c94;
+  margin-bottom:15px;
+}
+
+/* TESTIMONIOS */
+.testimonial{
+  background:#eef4ff;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+  font-style:italic;
+}
+
+/* MAPA */
+.map iframe{
+  width:100%;
+  height:400px;
+  border-radius:20px;
+  border:none;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:22px;
   text-decoration:none;
-  transition:0.3s;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
+</style>
 
-.btn:hover{
-  background:#174a87;
-}
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-content">
+    <div><strong>Clínica Integral D'Vega</strong></div>
+    <div>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="https://wa.me/521XXXXXXXXXX" class="btn">Agendar</a>
+    </div>
+  </div>
+</div>
 
-<div style="font-family:Times New Roman, sans-serif; background:#fafbfc; padding:0; margin:0;">
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Atención Médica Profesional</h1>
+    <p>Comprometidos con tu bienestar y salud integral</p>
+    <a href="https://wa.me/521XXXXXXXXXX" class="btn">Agenda tu cita</a>
+  </div>
+</div>
 
-<!-- HERO SECTION -->
-<div id="inicio"></div>
-<div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:70px 50px; background:#f0f4f7
-; border-radius:25px;">
-
-<div style="flex:1; min-width:300px; padding-right:30px;">
-
-
-<h1 style="font-size:52px; margin:0; color:#2a2e2e;">
-<span style="color:#3642a3;">Psic.</span> Cinthia Vega</h1>
-
-<h3 style="font-size:16px;; color:#191c1c; margin-top:10px;">
-Psicóloga clínica y metabólica
-</h3>
-
-<p style="color:#2e2c2c; line-height:1.15; margin-top:6px;">
-"Creo en una atención ética, empática y profesional, donde el bienestar y la calidad de vida se abordan de forma integral, respetando la individualidad de cada paciente."
-
-</p>
-<div style="background:#d9ebfa; padding:18px; border-radius:15px; margin-top:16px; box-shadow:0 5px 15px rgba(0,0,0,0.05); font-size:14px;">
-
-  <p style="color:#000000; font-weight:600; margin:0;">
-<strong style="border-bottom:2px solid #2563eb; padding-bottom:2px;">
-  Diplomado en:
-</strong>
-
+<!-- SOBRE -->
+<div class="section" id="sobre">
+  <h2>Sobre mí</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Soy especialista comprometida con brindar atención integral y personalizada.
+    Mi objetivo es acompañarte con profesionalismo, ética y empatía.
   </p>
-
-  <p style="color:#404d66; margin:5px 1 1 1;">
-    ✔ Primeros auxilios psicológicos (PAP). <br>
-    ✔ Psiconutrición. <br>
-    ✔ Programa para adulto mayor.
-  </p>
-
 </div>
-
-
-<div style="margin-top:30px;">
-<a href="https://api.whatsapp.com/send/?phone=528124388568&text&type=phone_number&app_absent=0" style="background:#2e2da6; color:white; padding:14px 28px; text-decoration:none; border-radius:30px; margin-right:12px; display:inline-block;">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-Agendar Cita
-</a>
-
-<a 
-href="https://api.whatsapp.com/send/?phone=528124388568&text&type=phone_number&app_absent=0" style="background:#27a334; color:white; padding:14px 28px; text-decoration:none; border-radius:30px; display:inline-block;">
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-<div style="flex:1; min-width:300px; text-align:center;">
-  <img src="https://i.ibb.co/mCBKyJCc/Foto-cinthia.png"
-       style="width:100%; max-width:420px; border-radius:25px; box-shadow:0 15px 35px rgba(0,0,0,0.15);">
-</div>
-
-
-</div>
-
-<!-- SOBRE MÍ -->
-<div style="background:white; padding:70px 50px; border-radius:25px;">
-
-<div id="sobremi"></div>
-<div style="padding:70px 50px;">
-<h2 style="text-align:center; margin-bottom:50px; font-size:40px; color:#163c94;">
-Sobre Mí
-</h2>
-<p style="text-align:justify-content:center; color:#555;">
-Soy psicóloga clínica con enfoque en la salud y el comportamiento humano, interesada en la integración entre mente, cuerpo y hábitos. Mi trabajo se centra en acompañar a las personas a comprender su relación con la alimentación, el estrés, las emociones y la salud desde una perspectiva psicológica basada en evidencia. Así de la misma forma ofrezco terapia cognitivo conductual , integrando mente, cuerpo, emociones y conducta.
-</p>
-
 
 <!-- SERVICIOS -->
-<div style="padding:70px 50px;">
-<div id="servicios"></div>
-<h2 style="text-align:center; margin-bottom:50px; font-size:40px; color:#163c94;">
-Mis Servicios
-</h2>
-
-<div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
-
-<div style="background:#d9ebfa; padding:35px; border-radius:20px; width:350px; box-shadow:0 10px 25px rgba(0,0,0,0.05); border:2px solid #e8f0fb;">
-<h3 style="color:#163c94; border-bottom:2px solid #2563eb; padding-bottom:5px; margin-top:0;">
-Psicología cognitivo conductual </h3>
-<p style="color:#302b2b;">
-✔ Acompañamiento emocional<br>
-✔ Toma de decisiones<br>
-✔ Entendimiento y función de las emociones <br>
-✔ Manejo de estrés y ansiedad <br>
-✔ Modificación de pensamiento y conducta  <br>
-✔ Modificación de hábitos
-</p>
+<div class="section" id="servicios">
+  <h2>Servicios</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Consulta Especializada</h3>
+      <p>Valoración completa y seguimiento personalizado.</p>
+    </div>
+    <div class="card">
+      <h3>Control Metabólico</h3>
+      <p>Evaluación y tratamiento integral.</p>
+    </div>
+    <div class="card">
+      <h3>Prevención</h3>
+      <p>Programas preventivos adaptados a tus necesidades.</p>
+    </div>
+  </div>
 </div>
 
-<div style="background:#d9ebfa; padding:35px; border-radius:20px; width:350px; box-shadow:0 10px 25px rgba(0,0,0,0.05); border:2px solid #e8f0fb;">
-<h3 style="color:#163c94; border-bottom:2px solid #2563eb; padding-bottom:5px; margin-top:0;">
-Psicología metabólica </h3>
-<p style="color:#302b2b;">
-✔ Entendimiento del proceso alimentario<br>
-✔ Mindful eating <br>
-✔ Mejorar la relación con la comida<br>
-✔ Trabajo interdisciplinario con médicos metabólicos<br>
-</p>
+<!-- TESTIMONIOS -->
+<div class="section" id="testimonios">
+  <h2>Testimonios</h2>
+  <div class="testimonial">
+    “Excelente atención y trato humano.”
+  </div>
+  <div class="testimonial">
+    “Gran profesionalismo y seguimiento constante.”
+  </div>
 </div>
-
-</div>
-</div>
-
-
 
 <!-- UBICACIÓN -->
-<div style="background:white; padding:70px 50px; border-radius:25px;">
-
-<h2 style="text-align:center; font-size:40px; color:#1f4e79;">
-Ubicación y Horarios
-</h2>
-
- <p style="color:#000000; font-weight:600; font-size:16px; margin:0;">
-<strong style="solid #2563eb; padding-bottom:2px;">
-  Centro de Especialidades Médicas (CEM)
-</strong>
-
-  </p>
-<p style="text-align:center; font-size:16px; color:#555;">
-L. José Benítez #2704<br>
-Col. Obispado, Monterrey, NL
-</p>
-
- <p style="color:#000000; font-weight:600; font-size:16px; margin:0;">
-<strong style="solid #2563eb; padding-bottom:2px;">
-  Horario
-</strong>
-
-  </p>
-
-<p style="text-align:center; font-size:16px; color:#555;">
-
-Lun - Vie: 2:00 pm - 8:00 pm<br>
-Sábados: 7:00 am - 5:00 pm
-</p>
-
-
-<div style="text-align:center; margin-top:25px;">
-<a href="https://www.google.com.mx/maps/dir//Centro+de+Especialidades+M%C3%A9dicas,+Lic.+Jos%C3%A9+Ben%C3%ADtez+2704,+Col.+Obispado+69,+64060+Monterrey,+N.L./@25.6487678,-100.3094129,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8662be0292425fdb:0x69c8d5c44d8dee4e!2m2!1d-100.3509737!2d25.6756751?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" style="background:#1f4e79; color:white; padding:14px 28px; border-radius:30px; text-decoration:none;">
-  
-    </div>
-Ver en Google Maps
-</a>
+<div class="section map" id="ubicacion">
+  <h2>Ubicación</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Monterrey,Nuevo+León&output=embed">
+  </iframe>
 </div>
 
-</div>
-
-<!-- CTA FINAL -->
-<div style="background:#1f4e79; padding:60px 40px; text-align:center; color:white; border-radius:25px; margin-top:50px;">
-
-<h2>
-¿Te interesa agendar tu primera consulta?
-</h2>
-
-<p>
-Te ofrezco atención profesional, acompañandote en el proceso de recuperar tu equilibrio físico y emocional.
-</p>
-
-<div style="margin-top:30px;">
-<a href="https://api.whatsapp.com/send/?phone=528124388568&text&type=phone_number&app_absent=0" style="background:white; padding:14px 28px; text-decoration:none; border-radius:30px; margin-right:12px; display:inline-block;">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-Agendar Cita
-</a>
-
-<a 
-href="https://api.whatsapp.com/send/?phone=528124388568&text&type=phone_number&app_absent=0" style="background:#27a334; color:white; padding:14px 28px; text-decoration:none; border-radius:30px; display:inline-block;">
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<div style="text-align:center; padding:30px; color:#777; font-size:13px;">
-© 2026 Psic. Cinthia Vega. Todos los derechos reservados.
-</div>
-
-</div>
+<!-- WHATSAPP -->
+<a href="https://wa.me/528124388568" class="whatsapp">💬</a>
+</body>
+</html>
 
