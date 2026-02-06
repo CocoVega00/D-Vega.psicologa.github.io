@@ -28,14 +28,25 @@ nav{
   position:fixed;
   width:100%;
   top:0;
+  left:0;
   background:white;
   box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  padding:18px 8%;
+  padding:18px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
 }
+
+nav div{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+  nav a{
+  white-space:nowrap;
+}
+
 
 nav a{
   text-decoration:none;
@@ -66,6 +77,10 @@ nav a:hover{
 }
 
 
+.agendarcita-btn{
+  background:#22d7e0;
+} 
+  
 .whatsapp-btn{
   background:#1ebe5d;
 }
@@ -268,7 +283,11 @@ footer{
 <body>
 
 <nav>
-  <strong>D'Vega Clinic</strong>
+  <nav>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="img/logo.png" alt="Logo" style="height:35px;">
+    <strong>D'Vega Clinic</strong>
+  </div>
   <div>
     <a href="#inicio">Inicio</a>
     <a href="#sobre-mi">Sobre Mí</a>
@@ -302,7 +321,7 @@ footer{
     </div>
 
     <div class="botones">
-      <a href="https://wa.me/528124388568" class="btn">Agendar Cita</a>
+      <a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar Cita</a>
       <a href="https://wa.me/528124388568" class="btn whatsapp-btn">WhatsApp</a>
     </div>
 
@@ -354,7 +373,10 @@ footer{
     </div>
     <div class="card">
       <h3>Valores</h3>
-      <p>¿Y sus valores?</p>
+      <p>-Humanización: rato digno, respetuoso y personalizado.</p>
+        <p>-Calidad y seguridad: Atención integral continua con alos estándares</p>
+        <p>-Innovación: Enfoque en tecnología avanzada  salud digna</p>
+        <p>-Éica y colaboración: rabajo colaborativo, empatia  gesttión ética.</p>
     </div>
   </div>
 </section>
@@ -385,13 +407,11 @@ footer{
 
   <!-- HORARIOS -->
 <section class="section" id="Horarios-Ubicacion">
-  <h2>Ubicación y Horarios</h2>
-
+  <h2>Ubicación</h2>
   <div class="cards">
-
     <div class="card">
-      <h4>Ubicación 1</h4>
-      <p><strong>Centro de Especialidades Médicas (CEM)</strong></p>
+      <h4>Ubicación</h4>
+      <p><strong>José ??</strong></p>
       <p>José Ma. Coss #426, interior A, Nte</p>
       <p>Col. Centro, C.P. 64000, Monterrey, N.L.</p>
       <br>
@@ -401,7 +421,7 @@ footer{
     </div>
 
     <div class="card">
-      <h4>Ubicación 2</h4>
+      <h4>Ubicación</h4>
       <p><strong>Centro de Especialidades Médicas (CEM)</strong></p>
       <p>Lic. José Benítez #2704</p>
       <p>Col. Obispado, C.P. 64060, Monterrey, N.L.</p>
@@ -419,7 +439,7 @@ footer{
   <h2>¿Listo para agendar tu consulta?</h2>
   <p>Te ofrezco atención profesional, cercana y enfocada en tu salud integral.</p>
   <br>
-  <a href="https://wa.me/528124388568" class="btn">Agendar Ahora</a>
+  <a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar Ahora</a>
   <a href="https://wa.me/528124388568" class="btn whatsapp-btn">Enviar WhatsApp</a>
     <h2>Conocenos a través de redes</h2>  <br>
   <a href="https://wa.me/528124388568" class="btn facebook-btn">Facebook</a>
