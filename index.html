@@ -5,42 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D'Vega Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
   font-family:'Inter', sans-serif;
-  background: linear-gradient(135deg,#f4f7fb 0%,#eaf1f9 40%,#f8fbff 100%);
+  background: linear-gradient(135deg,#f4f7fb 0%,#eaf1f9 50%,#ffffff 100%);
   color:#1f2937;
-  scroll-behavior: smooth;
 }
 
-/* NAV */
+/* ================= NAV ================= */
+
 nav{
   position:fixed;
-  width:100%;
   top:0;
   left:0;
+  width:100%;
   background:white;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  padding:18px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:15px 8%;
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
   z-index:1000;
 }
 
-.logo-container{
+.logo{
   display:flex;
   align-items:center;
   gap:10px;
+  font-weight:600;
   font-size:18px;
 }
 
-.logo-container img{
-  height:35px;
+.logo img{
+  height:32px;
+  width:auto;
 }
 
 .menu{
@@ -51,108 +57,63 @@ nav{
 
 .menu a{
   text-decoration:none;
-  color:#4b5563;
+  color:#374151;
   font-weight:500;
-  white-space:nowrap;
+  font-size:15px;
 }
 
 .menu a:hover{
-  color:#1f5fae;
+  color:#1e4f8a;
 }
 
-/* BOTONES */
-.btn{
-  background:#1e4f8a;
+/* BOTÓN NAV */
+.nav-btn{
+  background:#22d7e0;
   color:white;
-  padding:10px 22px;
-  border-radius:30px;
+  padding:8px 18px;
+  border-radius:25px;
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
-  box-shadow:0 4px 15px rgba(30,79,138,0.4);
+  white-space:nowrap;
 }
 
-.btn:hover{
-  background:#163b69;
-  transform:translateY(-2px);
+.nav-btn:hover{
+  background:#1abac2;
 }
 
-.agendarcita-btn{
-  background:#22d7e0;
-}
+/* ================= SECCIONES ================= */
 
-.whatsapp-btn{
-  background:#1ebe5d;
-}
-
-.instagram-btn{
-  background:#e34469;
-}
-
-.facebook-btn{
-  background:#1877f2;
-}
-
-/* HERO */
 .section{
-  padding:80px 10%;
-  opacity:0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  padding:120px 8% 80px 8%;
 }
 
-.section.visible{
-  opacity:1;
-  transform: translateY(0);
-}
-
-.hero-container{
-  margin-top:80px;
-  background: linear-gradient(145deg,#eef2f7,#ffffff);
-  border-radius:30px;
-  padding:60px;
+.hero{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:60px;
+  gap:50px;
   flex-wrap:wrap;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 .hero-text{
   flex:1;
-  min-width:320px;
+  min-width:280px;
 }
 
 .hero-text h1{
-  font-size:42px;
+  font-size:40px;
   margin-bottom:10px;
 }
 
 .hero-text h3{
   font-weight:500;
   margin-bottom:20px;
-  color:#374151;
+  color:#4b5563;
 }
 
-.frase{
-  max-width:520px;
-  margin-bottom:25px;
+.hero-text p{
   line-height:1.6;
-}
-
-.diplomado{
-  background:#dbe7f5;
-  padding:18px;
-  border-radius:15px;
-  margin-bottom:25px;
-  max-width:420px;
-}
-
-.botones{
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
 }
 
 .hero-img{
@@ -161,74 +122,70 @@ nav{
 }
 
 .hero-img img{
+  max-width:400px;
   width:100%;
-  max-width:420px;
-  border-radius:25px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.12);
-}
-
-/* TITULOS */
-.section h2{
-  text-align:center;
-  font-size:28px;
-  font-weight:600;
-  margin-bottom:50px;
-  color:#1e4f8a;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 /* TARJETAS */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
+  margin-top:40px;
 }
 
 .card{
   background:white;
   padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  border:1px solid #e5e7eb;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.12);
 }
 
-.card h3, .card h4{
-  margin-bottom:15px;
-  font-weight:600;
+h2{
+  text-align:center;
   color:#1e4f8a;
+  margin-bottom:20px;
 }
 
 /* CTA */
+
 .cta{
   background:#1e4f8a;
   color:white;
-  padding:80px 20px;
   text-align:center;
+  padding:70px 20px;
 }
 
-.cta h2{
+.cta a{
+  display:inline-block;
+  margin:10px;
+  padding:10px 25px;
+  border-radius:25px;
+  background:#22d7e0;
   color:white;
-  margin-bottom:15px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* FOOTER */
-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-}
+/* RESPONSIVE */
 
 @media(max-width:900px){
-  .hero-container{
+  .hero{
     flex-direction:column;
     text-align:center;
+  }
+
+  .menu{
+    gap:15px;
   }
 }
 
@@ -237,117 +194,62 @@ footer{
 <body>
 
 <nav>
-  <div class="logo-container">
-    <img src="img/Logotipo.png" alt="Logo">
-    <strong>D'Vega Clinic</strong>
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo">
+    D'Vega Clinic
   </div>
 
   <div class="menu">
     <a href="#inicio">Inicio</a>
-    <a href="#sobre-mi">Sobre Mí</a>
+    <a href="#sobre">Sobre Mí</a>
     <a href="#servicios">Servicios</a>
-    <a href="#Horarios-Ubicacion">Ubicación</a>
-    <a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="https://wa.me/528124388568" class="nav-btn">Agendar</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="section" id="inicio">
-<div class="hero-container">
+<section id="inicio" class="section">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Psic. Cinthia Vega</h1>
+      <h3>Psicóloga clínica y metabólica</h3>
+      <p>
+        Atención ética, profesional e integral enfocada en la salud mental y el bienestar.
+      </p>
+    </div>
 
-<div class="hero-text">
-<h1><span style="color:#1e4f8a;">Psic.</span> Cinthia Vega</h1>
-<h3>Psicóloga clínica y metabólica</h3>
-
-<p class="frase">
-Creo en una atención ética, empática y profesional, donde el bienestar y la calidad de vida se abordan de forma integral, respetando la individualidad de cada paciente.
-</p>
-
-<div class="diplomado">
-<strong>Diplomado en:</strong><br>
-✓ Primeros auxilios psicológicos (PAP)<br>
-✓ Psiconutrición<br>
-✓ Programa para adulto mayor
-</div>
-
-<div class="botones">
-<a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar Cita</a>
-<a href="https://wa.me/528124388568" class="btn whatsapp-btn">WhatsApp</a>
-</div>
-
-<p style="margin-top:15px; font-weight:500;">
-Costo de consulta: <strong>$500 MXN</strong>
-</p>
-</div>
-
-<div class="hero-img">
-<img src="img/Foto-cinthia.png" alt="Psic. Cinthia Vega">
-</div>
-
-</div>
+    <div class="hero-img">
+      <img src="img/Foto-cinthia.png" alt="Psic. Cinthia Vega">
+    </div>
+  </div>
 </section>
 
-<!-- SOBRE MI -->
-<section class="section" id="sobre-mi">
-<h2>Sobre Mí</h2>
-<div class="cards">
-<div class="card">
-<p>Soy psicóloga clínica con enfoque en la salud y el comportamiento humano, integrando mente, cuerpo, emociones y conducta desde una perspectiva basada en evidencia.</p>
-</div>
-</div>
+<section id="sobre" class="section">
+  <h2>Sobre Mí</h2>
+  <div class="cards">
+    <div class="card">
+      Psicóloga clínica con enfoque mente-cuerpo, basada en evidencia científica.
+    </div>
+  </div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="section" id="servicios">
-<h2>Servicios</h2>
-<p style="text-align:center; margin-top:-30px; margin-bottom:40px;">
-Atención especializada para tu bienestar integral
-</p>
-
-<div class="cards">
-<div class="card">
-<h3>Psicología Cognitivo Conductual</h3>
-<p>✓ Manejo de ansiedad y estrés</p>
-<p>✓ Modificación de hábitos</p>
-<p>✓ Acompañamiento emocional</p>
-</div>
-
-<div class="card">
-<h3>Psicología Metabólica</h3>
-<p>✓ Relación saludable con la comida</p>
-<p>✓ Mindful eating</p>
-<p>✓ Trabajo interdisciplinario</p>
-</div>
-</div>
+<section id="servicios" class="section">
+  <h2>Servicios</h2>
+  <div class="cards">
+    <div class="card">
+      Psicología Cognitivo Conductual
+    </div>
+    <div class="card">
+      Psicología Metabólica
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
-<h2>¿Listo para agendar tu consulta?</h2>
-<p>Atención profesional y cercana.</p>
-<br>
-<a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar Ahora</a>
-<a href="https://wa.me/528124388568" class="btn whatsapp-btn">Enviar WhatsApp</a>
+  <h2>Agenda tu consulta hoy</h2>
+  <a href="https://wa.me/528124388568">Agendar por WhatsApp</a>
 </section>
-
-<footer>
-<strong>Psic. Cinthia Vega</strong><br>
-© 2026 D'Vega Clinic | Todos los derechos reservados
-</footer>
-
-<script>
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-}, { threshold: 0.15 });
-sections.forEach(section => {
-observer.observe(section);
-});
-</script>
 
 </body>
 </html>
+
