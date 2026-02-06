@@ -13,8 +13,14 @@
 body{
   margin:0;
   font-family:'Inter', sans-serif;
-  background:#f3f6fa;
+  background: linear-gradient(
+    135deg,
+    #f4f7fb 0%,
+    #eaf1f9 40%,
+    #f8fbff 100%
+  );
   color:#1f2937;
+  scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -84,7 +90,11 @@ nav a:hover{
 }
 
 .hero-container{
-  background:#eef2f7;
+  background:background: linear-gradient(
+  145deg,
+  #eef2f7,
+  #ffffff
+);
   border-radius:30px;
   padding:60px;
   display:flex;
@@ -139,7 +149,9 @@ nav a:hover{
   width:100%;
   max-width:420px;
   border-radius:25px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+ box-shadow:
+  0 30px 60px rgba(0,0,0,0.12),
+  inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
 /* SECCIONES */
@@ -234,6 +246,18 @@ footer{
   .diplomado{
     margin:auto;
   }
+}
+  
+/* ANIMACION SCROLL */
+.section{
+  opacity:0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section.visible{
+  opacity:1;
+  transform: translateY(0);
 }
 
 </style>
@@ -403,6 +427,21 @@ footer{
     <strong>Psic. Cinthia Vega</strong> <Br>
 © 2026 D'Vega Clinic | Todos los derechos reservados
 </footer>
+<script>
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 
 </body>
 </html>
