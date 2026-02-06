@@ -61,7 +61,7 @@ nav a:hover{
 
 .menu{
   display:flex;
-  align-items:center;
+  align-items:left;
   gap:25px;
 }
 
@@ -93,6 +93,9 @@ nav a:hover{
   transform:translateY(-2px);
 }
 
+.agendarcita-btn{
+  background:#22d7e0;
+} 
 
 .whatsapp-btn{
   background:#1ebe5d;
@@ -281,6 +284,17 @@ footer{
   }
 }
   
+  /* Diseño celular */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    gap:30px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+}
 /* ANIMACION SCROLL */
 .section{
   opacity:0;
@@ -310,7 +324,6 @@ footer{
     <a href="#sobre-mi">Sobre Mí</a>
     <a href="#servicios">Servicios</a>
     <a href="#Horarios-Ubicacion">Ubicación</a>
-    <a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar</a>
   </div>
 </nav>
 
@@ -391,7 +404,10 @@ footer{
     </div>
     <div class="card">
       <h3>Valores</h3>
-      <p>¿Y sus valores?</p>
+      <p>-Humanización: Trato digno, respetuoso y personalizado.</p>
+      <p>-Calidad y Seguridad: Atención integral continua con altos estandares.</p>
+    <p>-Innovación: Enoque en tecnología avanzada y salud digna.</p>
+      <p>-Ética y Colaboración: Trabajo colaborativo, empatía y gestión ética.</p>
     </div>
   </div>
 </section>
@@ -424,13 +440,13 @@ Atención especializada para tu bienestar integral
 
   <!-- HORARIOS -->
 <section class="section" id="Horarios-Ubicacion">
-  <h2>Ubicación y Horarios</h2>
+  <h2>Ubicación</h2>
 
   <div class="cards">
 
     <div class="card">
-      <h4>Ubicación 1</h4>
-      <p><strong>Centro de Especialidades Médicas (CEM)</strong></p>
+      <h4>Ubicación</h4>
+      <p><strong>José ??</strong></p>
       <p>José Ma. Coss #426, interior A, Nte</p>
       <p>Col. Centro, C.P. 64000, Monterrey, N.L.</p>
       <br>
@@ -440,7 +456,7 @@ Atención especializada para tu bienestar integral
     </div>
 
     <div class="card">
-      <h4>Ubicación 2</h4>
+      <h4>Ubicación</h4>
       <p><strong>Centro de Especialidades Médicas (CEM)</strong></p>
       <p>Lic. José Benítez #2704</p>
       <p>Col. Obispado, C.P. 64060, Monterrey, N.L.</p>
@@ -458,7 +474,7 @@ Atención especializada para tu bienestar integral
   <h2>¿Listo para agendar tu consulta?</h2>
   <p>Te ofrezco atención profesional, cercana y enfocada en tu salud integral.</p>
   <br>
-  <a href="https://wa.me/528124388568" class="btn">Agendar Ahora</a>
+  <a href="https://wa.me/528124388568" class="btn agendarcita-btn">Agendar Ahora</a>
   <a href="https://wa.me/528124388568" class="btn whatsapp-btn">Enviar WhatsApp</a>
     <h2>Conocenos a través de redes</h2>  <br>
   <a href="https://wa.me/528124388568" class="btn facebook-btn">Facebook</a>
