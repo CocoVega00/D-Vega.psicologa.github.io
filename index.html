@@ -294,30 +294,37 @@ footer{
 
   .hero-container{
     flex-direction: column;
-    padding: 30px 20px;   /* menos padding */
-  gap:40px;   /* antes 60px */
+    padding: 30px 20px;
+    gap:40px;
+    text-align:center; /* esto centra todo el texto */
+  }
+
+  .hero-img{
+  margin-top: 10px;
+  margin-left: 0;
+  text-align:center;
 }
 
-
-  .hero-img{
-    margin-top: 10px;
-  }
-  .hero-img{
-    margin-left: -30px;
-  }
-  .hero-img img{
-    max-width: 280px;     /* imagen más pequeña en celular */
+  .hero-text{
+    width:100%;
   }
 
-  .botones{
-    justify-content: center;
+  .hero-text h1{
+    font-size:32px; /* más proporcionado en celular */
+  }
+
+  .frase{
+    max-width:100%;
+    margin: 0 auto 20px auto;
   }
 
   .diplomado{
+    max-width:100%;
     margin: 0 auto 20px auto;
   }
 
 }
+
 /* ANIMACION SCROLL */
 .section{
   opacity:0;
