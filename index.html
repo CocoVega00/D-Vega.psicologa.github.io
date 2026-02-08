@@ -290,15 +290,30 @@ footer{
 }
   
   /* Diseño celular */
-@media (max-width: 768px) {
-  .hero-container {
+@media (max-width: 768px){
+
+  .hero-container{
     flex-direction: column;
-    gap:30px;
+    padding: 30px 20px;   /* menos padding */
+    gap: 30px;            /* menos espacio */
   }
 
-  .hero-text h1 {
-    font-size: 30px;
+  .hero-img{
+    margin-top: 10px;
   }
+
+  .hero-img img{
+    max-width: 280px;     /* imagen más pequeña en celular */
+  }
+
+  .botones{
+    justify-content: center;
+  }
+
+  .diplomado{
+    margin: 0 auto 20px auto;
+  }
+
 }
 /* ANIMACION SCROLL */
 .section{
